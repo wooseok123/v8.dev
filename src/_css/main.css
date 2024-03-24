@@ -15,19 +15,19 @@
 :root {
   color-scheme: dark light;
   /* Colors used in the V8 logos. */
-  --blue: #4285F4;
+  --blue: #4285f4;
   --darkgray: #464646;
-  --lightgray: #A6A6A6;
-  --white: #FFF;
+  --lightgray: #a6a6a6;
+  --white: #fff;
   /* Derived colors. */
   --black: #000;
   --darkestgray: #232323;
-  --nearwhite: #FEFEFE;
-  --darkblue: #0A50C2;
-  --lightestgray: #D6D6D6;
-  --lightyellow: #FDEEB5;
-  --yellow: #FAD956;
-  --orange: #F8A602;
+  --nearwhite: #fefefe;
+  --darkblue: #0a50c2;
+  --lightestgray: #d6d6d6;
+  --lightyellow: #fdeeb5;
+  --yellow: #fad956;
+  --orange: #f8a602;
 
   /* Body padding offset. */
   --offset: 2em;
@@ -47,7 +47,7 @@
   --tag-background: var(--lightestgray);
   --table-border: var(--lightestgray);
   --logo-hover-background: var(--lightestgray);
-  --alt-table-row-background: #EEE;
+  --alt-table-row-background: #eee;
 }
 
 :root.dark {
@@ -80,7 +80,14 @@
 * {
   box-sizing: border-box;
 }
-html, body, fieldset, nav ul, nav ul li, h1, h2, h3 {
+html,
+body,
+fieldset,
+nav ul,
+nav ul li,
+h1,
+h2,
+h3 {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -101,7 +108,8 @@ body {
   background: var(--blue);
   padding: 0 1em;
 }
-#header nav ul, #header nav li {
+#header nav ul,
+#header nav li {
   display: flex;
   justify-content: flex-end;
   align-content: center;
@@ -124,11 +132,12 @@ body {
   text-indent: -9999em;
   overflow: hidden;
 }
-#header nav a, #nav-toggle {
+#header nav a,
+#nav-toggle {
   padding: 1em;
   color: var(--black);
   font-weight: bold;
-  background: rgba(255, 255, 255, .8);
+  background: rgba(255, 255, 255, 0.8);
   font-size: 1em;
   margin-right: 1em;
   display: block;
@@ -138,7 +147,7 @@ body {
 }
 #nav-toggle::after {
   background: url(/_img/v8-outline.svg) no-repeat center center;
-  content: '';
+  content: "";
   width: 2em;
   height: 2em;
   display: inline-block;
@@ -146,11 +155,12 @@ body {
   vertical-align: middle;
 }
 #header nav .current a {
-  background: #FFF;
+  background: #fff;
 }
-#header nav a:hover, #header nav a:focus {
+#header nav a:hover,
+#header nav a:focus {
   background-color: var(--darkgray);
-  color: #FFF;
+  color: #fff;
 }
 nav li:last-child a {
   margin-right: 0;
@@ -162,7 +172,8 @@ a {
   width: 100%;
   height: 600px;
 }
-main, #footer {
+main,
+#footer {
   background: var(--main-background);
   padding: 1em var(--offset);
 }
@@ -207,15 +218,17 @@ hr {
   border-color: var(--darkgray);
   font-weight: bold;
 }
-.retweet:hover, .retweet:focus {
+.retweet:hover,
+.retweet:focus {
   color: var(--nearwhite);
   background-color: var(--darkgray);
   border-color: var(--darkgray);
 }
 #footer {
   color: var(--footer-color);
-  background: var(--footer-background) url(/_img/v8-outline.svg) no-repeat 95.5% center;
-  padding-right: 12em;
+  background: var(--footer-background) url(/_img/v8-outline.svg) no-repeat 96%
+    center;
+  padding-right: 10.8em;
   background-size: 10em;
 }
 #footer div {
@@ -224,22 +237,33 @@ hr {
   align-items: flex-end;
 }
 
-pre, code, var, kbd, samp {
+#footer nav a {
+  margin-right: 0.2em;
+}
+
+pre,
+code,
+var,
+kbd,
+samp {
   font-family: Source Code Pro, Monaco, Lucida Console, monospace;
   font-size: 1em;
 }
 pre {
   background: #171717;
-  color: #E6E1DC;
+  color: #e6e1dc;
   white-space: pre;
   overflow: auto;
 }
-pre, article footer, .note {
+pre,
+article footer,
+.note {
   width: calc(100% + var(--offset) * 2);
   margin-left: calc(-1 * var(--offset));
   padding: 1em 1em 1em var(--offset);
 }
-ol, ul {
+ol,
+ul {
   padding-inline-start: var(--offset);
 }
 .ecmascript-algorithm ol > li > ol {
@@ -267,7 +291,9 @@ pre code {
   color: inherit;
   background: inherit;
 }
-mark, del, ins {
+mark,
+del,
+ins {
   padding: 0.2em;
 }
 pre mark {
@@ -280,12 +306,13 @@ pre ins {
   background-color: green;
 }
 del {
-  background: #FDD;
+  background: #fdd;
 }
 ins {
-  background: #AFA;
+  background: #afa;
 }
-ins, del:hover {
+ins,
+del:hover {
   text-decoration: none;
 }
 article footer a {
@@ -296,23 +323,29 @@ article footer a:hover {
   color: var(--nearwhite);
   background-color: var(--darkblue);
 }
-main a, footer a {
+main a,
+footer a {
   color: var(--main-and-footer-link-color);
   border-bottom: 1px solid var(--main-and-footer-link-color);
   padding: 2px 2px 1px 2px;
 }
-main a:hover, main a:focus, footer a:hover, footer a:focus {
+main a:hover,
+main a:focus,
+footer a:hover,
+footer a:focus {
   background-color: var(--main-and-footer-link-color);
   color: var(--main-background);
 }
-main a:hover code, main a:focus code {
+main a:hover code,
+main a:focus code {
   background-color: inherit;
 }
 .note a {
   color: var(--darkblue);
   border-bottom: 1px solid var(--darkblue);
 }
-.note a:hover, .note a:focus {
+.note a:hover,
+.note a:focus {
   color: var(--white);
   background-color: var(--darkblue);
 }
@@ -370,7 +403,8 @@ figcaption {
 iframe {
   border: 0;
 }
-iframe + h2, iframe + h3 {
+iframe + h2,
+iframe + h3 {
   margin-top: 1em;
 }
 .table-wrapper {
@@ -384,11 +418,12 @@ table {
 }
 thead th {
   background: var(--darkblue);
-  color: #FFF;
+  color: #fff;
 }
-th, td {
+th,
+td {
   border: 1px solid var(--table-border);
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 tbody tr:nth-child(odd) {
   background-color: var(--alt-table-row-background);
@@ -486,7 +521,6 @@ dark-mode-toggle {
   --dark-mode-toggle-dark-icon: url(/_css/img/sun.svg);
   --dark-mode-toggle-color: var(--main-and-footer-link-color);
   --dark-mode-toggle-icon-filter: invert(80%);
-  margin-left: 1em;
   position: relative;
   top: 0.4rem;
 }
@@ -515,7 +549,8 @@ dark-mode-toggle {
 }
 
 @media (max-width: 819px) {
-  #header, .compact #header {
+  #header,
+  .compact #header {
     height: auto;
     background: transparent;
     padding: 0;
@@ -527,10 +562,12 @@ dark-mode-toggle {
   #header nav ul {
     position: static;
   }
-  #header nav ul, #header nav li {
+  #header nav ul,
+  #header nav li {
     display: block;
   }
-  #header nav a, #nav-toggle {
+  #header nav a,
+  #nav-toggle {
     margin-right: 0;
   }
   #header h1 a {
@@ -538,15 +575,18 @@ dark-mode-toggle {
   }
   #header nav .current a {
     background: #333;
-    color: #FFF;
+    color: #fff;
   }
-  .js #nav-toggle, .js #header nav.show {
+  .js #nav-toggle,
+  .js #header nav.show {
     display: block;
   }
-  .js #nav-toggle.hide, .js #header nav {
+  .js #nav-toggle.hide,
+  .js #header nav {
     display: none;
   }
-  main nav a[rel="prev"], main nav a[rel="next"] {
+  main nav a[rel="prev"],
+  main nav a[rel="next"] {
     float: none;
     display: block;
     text-align: center;
@@ -571,11 +611,11 @@ dark-mode-toggle {
 .token.selector,
 .token.operator,
 .token.punctuation {
-  color: #FFF;
+  color: #fff;
 }
 
 .token.namespace {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .token.tag,
@@ -587,7 +627,7 @@ dark-mode-toggle {
 .token.attr-value,
 .token.hex,
 .token.string {
-  color: #B0C975;
+  color: #b0c975;
 }
 
 .token.property,
@@ -595,7 +635,7 @@ dark-mode-toggle {
 .token.url,
 .token.attr-name,
 .token.keyword {
-  color: #C27628;
+  color: #c27628;
 }
 
 pre mark .token.property,
@@ -611,21 +651,21 @@ pre mark .token.punctuation {
 
 .token.function,
 .token.constant {
-  color: #E5A638;
+  color: #e5a638;
 }
 
 .token.variable {
-  color: #FDFBA8;
+  color: #fdfba8;
 }
 
 .token.number,
 .token.regex {
-  color: #FCC934;
+  color: #fcc934;
 }
 
 .token.important,
 .token.deliminator {
-  color: #E45734;
+  color: #e45734;
 }
 
 .highlight-line {
